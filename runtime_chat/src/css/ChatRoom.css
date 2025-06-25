@@ -1,0 +1,131 @@
+/* ChatRoom.css */
+.chat-box {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.header button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #dc3545;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.header button:hover {
+  background-color: #c82333;
+}
+
+.messages {
+  flex: 1;
+  height: 350px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 70%;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.message.self {
+  align-self: flex-end;
+  background-color: #e0f7fa;
+  color: #007bff;
+  text-align: right;
+}
+
+.message.other {
+  align-self: flex-start;
+  background-color: #f1f1f1;
+  color: #333;
+  text-align: left;
+}
+
+.message.system {
+  align-self: center;
+  font-style: italic;
+  color: #888;
+  background: transparent;
+  text-align: center;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-box input:focus {
+  border-color: #007bff;
+}
+
+.input-box button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.input-box button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .chat-box {
+    padding: 20px;
+  }
+
+  .message {
+    max-width: 100%;
+  }
+}
